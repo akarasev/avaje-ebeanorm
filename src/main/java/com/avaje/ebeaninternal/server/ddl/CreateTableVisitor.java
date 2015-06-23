@@ -151,7 +151,7 @@ public class CreateTableVisitor extends AbstractBeanVisitor {
 			return false;
 		}
 		 
-		ctx.write("create table ");
+		ctx.write("create table if not exists ");
 		writeTableName(descriptor);
 		ctx.write(" (").writeNewLine();
 		

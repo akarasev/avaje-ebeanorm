@@ -39,7 +39,7 @@ public class CreateSequenceVisitor implements BeanVisitor {
 		} 
 
 		if (descriptor.getSequenceName() != null) {
-			ctx.write("create sequence ");
+			ctx.write("create sequence if not exists ");
 			ctx.write(descriptor.getSequenceName());			
 			ctx.write(";").writeNewLine().writeNewLine();
 		}
